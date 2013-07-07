@@ -177,18 +177,26 @@
         <script src="assets/js/vendor/jquery.iosslider.min.js"></script>
         <script src="assets/js/vendor/jquery.flipCard.js"></script>
         <script>
-            $(document).on('pageinit', '#boys, #girls', function () {
-                $('.iosSlider').iosSlider({
-                    snapToChildren: true,
-                    desktopClickDrag: true
-                });
+            var toPageId = null;
+            $(document).bind('pagechange', function( e, data ) {
+                toPageId = data.toPage.attr("id");
+                console.log(toPageId);
             });
 
             $(document).bind("mobileinit", function(){
                 $.extend(  $.mobile , {
                     defaultPageTransition : 'slide'
                 });
+
+                $('.iosSlider').iosSlider({
+                    snapToChildren: true,
+                    desktopClickDrag: true
+                });
+
             });
+
+            $('.iosSlider').iosSlider('update');
+
         </script>
         <script src="assets/js/vendor/jquery.mobile-1.3.1.min.js"></script>
         <script src="assets/js/helper.js"></script>
