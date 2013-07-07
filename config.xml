@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.stark.firecards"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <name>Phone Gap Proof of Concept</name>
+
+    <description>
+        Phone Gap Proof of Concept - Comparing a phonegap based app vs a native iOS one I've written.
+    </description>
+
+    <author href="http://www.jaketoolson.com" email="jaketoolson@gmail.com">
+        Jake Toolson
+    </author>
+
+</widget>
