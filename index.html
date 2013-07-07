@@ -21,7 +21,7 @@
         <meta name="msapplication-TileColor" content="#222222">
 
 
-        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!-- For iOS web apps. -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="">
@@ -67,7 +67,8 @@
 
 
 
-       <div data-role="page" id="boys" data-theme="c">
+        <!-- // The Boys Page -->
+        <div data-role="page" id="boys" data-theme="c">
             <div data-role="header"> 
                 <h1>Boys</h1> 
                 <a href="#home" data-icon="home" data-theme="b" class="ui-btn-right">Home</a>
@@ -75,13 +76,13 @@
             <div data-role="content" class="ui-content">
                 <div class="sliderContainer">
                     <!-- slider container -->
-                    <div class = 'iosSlider'>
+                    <div class="iosSlider">
 
                         <!-- slider -->
-                        <div class = 'slider'>
+                        <div class="slider">
                         
                             <!-- slides -->
-                            <div class = 'item item1'>
+                            <div class="item item1">
                                 <div class="card-container blue">
                                     <div class="card click" data-direction="right">
                                       <div class="front">
@@ -96,7 +97,7 @@
                         
 
                             <!-- slides -->
-                            <div class = 'item item3'>
+                            <div class="item item3">
                                 <div class="card-container green">
                                     <div class="card click" data-direction="right">
                                       <div class="front">
@@ -111,7 +112,7 @@
 
 
                             <!-- slides -->
-                            <div class = 'item item2'>
+                            <div class="item item2">
                                 <div class="card-container orange">
                                     <div class="card click" data-direction="right">
                                       <div class="front">
@@ -135,8 +136,8 @@
 
 
 
-
-       <div data-role="page" id="girls" data-theme="c">
+        <!-- // The Girls Page -->
+        <div data-role="page" id="girls" data-theme="c">
             <div data-role="header"> 
                 <h1>Girls</h1> 
                 <a href="#home" data-icon="home" data-theme="b" class="ui-btn-right">Home</a>
@@ -145,13 +146,13 @@
                 <div class="sliderContainer card">
 
                     <!-- slider container -->
-                    <div class = 'iosSlider'>
+                    <div class="iosSlider">
 
                         <!-- slider -->
-                        <div class = 'slider'>
+                        <div class="slider">
                         
                             <!-- slides -->
-                            <div class = 'item item1'>
+                            <div class="item item1">
                                 <div class="card-container purple">
                                     <div class="card click" data-direction="right">
                                       <div class="front">
@@ -190,13 +191,7 @@
                 $.extend(  $.mobile , {
                     defaultPageTransition : 'slide'
                 });
-
-
-
             });
-
-            $('.iosSlider').iosSlider('update');
-
         </script>
         <script src="assets/js/vendor/jquery.mobile-1.3.1.min.js"></script>
         <script src="assets/js/helper.js"></script>
