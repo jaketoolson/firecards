@@ -38,7 +38,7 @@
     </head>
     <body>
 
-       <div data-role="page" id="home" data-theme="c">
+        <div data-role="page" id="home" data-theme="c">
             <div data-role="header"> 
                 <h1>FireCards - Flashcards</h1>
             </div> <!--//header-->
@@ -85,12 +85,12 @@
                             <div class="item item1">
                                 <div class="card-container blue">
                                     <div class="card click" data-direction="right">
-                                      <div class="front">
-                                            I am the front
-                                      </div>
-                                      <div class="back">
-                                            I am the back!
-                                      </div>
+                                        <div class="front">
+                                            <h1>I am a ginger</h1>
+                                        </div>
+                                        <div class="back">
+                                            <h3>Jake Toolson</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div><!-- //slide-->
@@ -100,12 +100,12 @@
                             <div class="item item3">
                                 <div class="card-container green">
                                     <div class="card click" data-direction="right">
-                                      <div class="front">
-                                            I am the front 2
-                                      </div>
-                                      <div class="back">
-                                            I am the back 2!
-                                      </div>
+                                        <div class="front">
+                                            <h1>I am tall</h1>
+                                        </div>
+                                        <div class="back">
+                                            <h3>Abraham Lincoln</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div><!-- //slide-->
@@ -115,12 +115,12 @@
                             <div class="item item2">
                                 <div class="card-container orange">
                                     <div class="card click" data-direction="right">
-                                      <div class="front">
-                                            I am the front 3
-                                      </div>
-                                      <div class="back">
-                                            I am the back 3!
-                                      </div>
+                                        <div class="front">
+                                            <h1>Young Kid</h1>
+                                        </div>
+                                        <div class="back">
+                                            <h3>Travis</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div><!-- //slide-->
@@ -144,10 +144,8 @@
             </div> <!--//header-->
             <div data-role="content" class="ui-content">
                 <div class="sliderContainer card">
-
                     <!-- slider container -->
                     <div class="iosSlider">
-
                         <!-- slider -->
                         <div class="slider">
                         
@@ -155,21 +153,35 @@
                             <div class="item item1">
                                 <div class="card-container purple">
                                     <div class="card click" data-direction="right">
-                                      <div class="front">
-                                            I am the front
+                                      <div class="card-side front">
+                                            <h1>I'm a readhead</h1>
                                       </div>
-                                      <div class="back">
-                                            I am the back!
+                                      <div class="card-side back">
+                                            <h3>Kaitlyn</h3>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div><!-- //slide-->
+
+
+                            <!-- slides -->
+                            <div class="item item4">
+                                <div class="card-container green">
+                                    <div class="card click" data-direction="right">
+                                      <div class="card-side front">
+                                            <h1>Our current President</h1>
+                                      </div>
+                                      <div class="card-side back">
+                                            <h3>Barack Obama.
+                                            </h3>
                                       </div>
                                     </div>
                                 </div>
                             </div><!-- //slide-->
                         
                         </div>
-
                     </div>
-
-                </div>
+                </div><!-- //iosSlider -->
             </div><!-- //content -->
         </div><!-- //pagegirls-->
 
@@ -178,7 +190,18 @@
         <script src="assets/js/vendor/jquery.iosslider.min.js"></script>
         <script src="assets/js/vendor/jquery.flipCard.js"></script>
         <script>
+            // OMG global vars. Whatevs...
+            var deviceReadyDeferred = $.Deferred();
+            var jqmReadyDeferred = $.Deferred();
             var toPageId = null;
+
+            document.addEventListener("deviceReady", deviceReady, false);
+
+            function deviceReady()
+            {
+                deviceReadyDeferred.resolve();
+            }
+
             $(document).bind('pagechange', function( e, data ) {
                 toPageId = data.toPage.attr("id");
                 $('#'+toPageId+' .iosSlider').iosSlider({
@@ -188,6 +211,7 @@
             });
 
             $(document).bind("mobileinit", function(){
+                jqmReadyDeferred.resolve();
                 $.extend(  $.mobile , {
                     defaultPageTransition : 'slide'
                 });

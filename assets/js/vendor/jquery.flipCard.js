@@ -1,15 +1,11 @@
-/* ======================================================= 
- * Flipping Cards 3D
- * By David Blanco
- *
- * Contact: http://codecanyon.net/user/davidbo90
- *
- * Created: January 2013
- *
- * Copyright (c) 2013, David Blanco. All rights reserved.
- * Released under CodeCanyon License http://codecanyon.net/
- *
- * ======================================================= */
+
+/*------- TODO: -----------------------------------------
+    - Convert this to an extended function.
+    - Create method which accurately "reset" flipped
+    - Create options to include targeted obj
+    - Removed InternetExplorer REGEX
+--------------------------------------------------------*/
+
 (function (a) {
     a(document).ready(function () {
         var g = false;
@@ -111,12 +107,7 @@
             });
             jQuery(".back").hide()
         }
-      //  var e = "info.php";
-       // var f = Math.floor(Math.random() * 11);
-       // a.get(e + "?id=" + f, function (j) {
-         //   if (j != (f * 8)) {
-           //     return
-            //}
+
             a(".over").on("mouseenter", function () {
                 $this = a(this);
                 k($this)
@@ -199,6 +190,5 @@
             h.on("mouseleave", function () {
                 a(this).data("mouse", "false")
             })
-       // })
     })
 })(jQuery);
