@@ -1,6 +1,5 @@
 
-            // WIP nuggz... 
-            
+            // WIP nuggz...
             var app = {
 
                 deviceReadyDeferred : $.Deferred(),
