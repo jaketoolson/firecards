@@ -5,7 +5,7 @@
         versionCode="10" 
         version   = "1.0.0">
 
-    <name>Phone Gap Proof of Concept</name>
+    <name>Firecards</name>
 
     <description>
         Phone Gap Proof of Concept - Comparing a phonegap based app vs a native iOS one I've written.
