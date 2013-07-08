@@ -10,6 +10,12 @@ I've made this a public repository to allow others whom indicated interest in PG
 
 -----
 
+### Note
+
+I am currently making all tests leveraging JQM methods instead of PG.  This will change overtime
+
+-----
+
 ### TODO *(as of July 5, 2013)*:
 - Implement Cordova's db/storage api.
 - Create methods for retrieving **actual** data from local db/storage.
