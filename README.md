@@ -17,3 +17,7 @@ I've made this a public repository to allow others whom indicated interest in PG
 - Add user tools-per-card (favorite/forgot/star/help).
 - Create Help/About pages.
 - more to come
+
+### License
+
+This is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
