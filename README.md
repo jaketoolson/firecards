@@ -6,12 +6,14 @@ Aside from allowing me to test and compare the differences in setting up an appl
 
 I've made this a public repository to allow others whom indicated interest in PG - watch progress. 
 
+*Yup, JQM and PhoneGap - the not-so-awesome combination, but it works for this*.
 
-Yup, JQM and PhoneGap - the not-so-awesome combination, but it works for this.
 -----
+
 ### TODO *(as of July 5, 2013)*:
 - Implement Cordova's db/storage api.
 - Create methods for retrieving **actual** data from local db/storage.
 - Create appropriate doesnt-look-like-jqm-theme.
 - Add user tools-per-card (favorite/forgot/star/help).
 - Create Help/About pages.
+- more to come
