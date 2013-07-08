@@ -13,7 +13,7 @@
                 bindEvents: function(){
                     document.addEventListener('deviceReady', this.onDeviceReady, false);
                     $(document).bind('pagechange', this.onPageChange);
-                    $( window ).on('orientationchange', this.onOrientationChange);
+                    $(window).bind('orientationchange resize', this.onOrientationChange);
                     $(document).one('mobileinit', this.onMobileInit);
                     console.log('events bound');
                 },
@@ -38,12 +38,13 @@
                 },
 
                 onOrientationChange: function(e){
-                    console.log('Orientation '+e.orientation);
                     app.initIosSlider(this.toPageId);
                 },
 
                 initIosSlider: function(pageId){
-                    $('#'+pageId+' .iosSlider').iosSlider({
+                    var that =  $('#'+pageId+' .iosSlider');
+                    that.iosSlider('update');
+                    that.iosSlider({
                         snapToChildren: true,
                         desktopClickDrag: true
                     });
