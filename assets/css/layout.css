@@ -48,7 +48,7 @@ content: '';
   margin-right: -0.25em; /* Adjusts for spacing */
 }
 
-.card h2, .card h3 {
+.card h1, .card h3 {
 	display: inline-block;
 	vertical-align: middle;
 	text-shadow: none;
